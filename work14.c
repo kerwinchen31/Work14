@@ -21,15 +21,16 @@ char ** parse_args( char *line) {
 }
 
 int main() {
-	// printf("What is your command?\n");
-	// char line[128];
-	// scanf("%s",line);
- //  	char ** args = parse_args( line );
- //  	execvp(args[0], args);
- //  	return 0;
-	printf("Doing command 'ls -l -a'\n");
+	 printf("What is your command?\n");
+	 char line[128];
+	 char hellow[100];
+	 scanf("%[^\n]s",line);
+	 char ** args = parse_args( line );
+	 execvp(args[0], args);
+  	return 0;
+  /*printf("Doing command 'ls -l -a'\n");
 	char line[100] = "ls -a -l";
   	char ** args = parse_args( line );
   	execvp(args[0], args);
-  	return 0;
+  	return 0;*/
 }
